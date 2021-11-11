@@ -8,7 +8,7 @@
     <androidx.cardview.widget.CardView
         android:layout_width="316.76dp"
         android:layout_height="300dp"
-        app:cardCornerRadius="50dp"
+        app:cardCornerRadius="10dp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -18,6 +18,7 @@
             android:id="@+id/SliderImage"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:scaleType="fitXY"
             android:layout_marginTop="0dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -29,20 +30,13 @@
            android:layout_height="match_parent">
            <ImageView
                android:layout_width="19dp"
-               android:layout_height="19dp"
+               android:layout_height="23dp"
                android:layout_marginLeft="255dp"
                android:layout_marginTop="26.73dp"
                android:layout_marginRight="34.21dp"
-               android:src="@drawable/white_pen"
+               android:src="@drawable/edit_icon"
                />
 
-           <ImageView
-               android:layout_width="23.3dp"
-               android:layout_height="1.28dp"
-               android:layout_marginStart="254.49dp"
-               android:layout_marginTop="49.2dp"
-               android:layout_marginRight="39.49dp"
-               android:src="@drawable/pen_rest" />
 
            <ImageView
                android:layout_width="57dp"
