@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/shapedImage"
+        android:layout_width="69dp"
+        android:layout_height="68dp"
+        android:layout_marginStart="29.5dp"
+        android:layout_marginRight="50dp"
+        app:shapeAppearanceOverlay="@style/circular" />
+
+
+    <androidx.cardview.widget.CardView
+
+        android:layout_width="259dp"
+        android:layout_height="94dp"
+        android:layout_marginStart="28dp"
+        app:cardElevation="34dp">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:text="@string/name"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+
+            <ImageView
+                android:id="@+id/cake_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="26.97dp"
+                android:layout_marginTop="43dp"
+                android:src="@drawable/cake"/>
+
+            <TextView
+               android:id="@+id/dateText"
+                android:layout_width="59.72dp"
+                android:layout_height="10dp"
+                android:layout_marginStart="50.49dp"
+                android:layout_marginBottom="41.52dp"
+                android:layout_marginTop="46.17dp"
+                android:textSize="9sp"
+                android:text="@string/_20_10_2020"/>
+
+
+            <TextView
+                android:id="@+id/daysRemaining"
+                android:layout_width="wrap_content"
+                android:layout_height="10dp"
+                android:layout_marginStart="50.49dp"
+                android:layout_marginBottom="16.77dp"
+                android:layout_marginTop="70.17dp"
+                android:textSize="9sp"
+                android:text="@string/_30_days_left"/>
+
+            <ImageView
+                android:id="@+id/calender_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="26.97dp"
+                android:layout_marginTop="67dp"
+                android:src="@drawable/calender"/>
+
+            <ImageView
+                android:id="@+id/couffeti_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginStart="170dp"
+                android:src="@drawable/coffeti"/>
+
+                <ImageView
+                   android:id="@+id/pipe_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="241dp"
+                    android:layout_marginTop="25dp"
+                    android:layout_marginBottom="15.84dp"
+                    android:src="@drawable/pipe"
+                    android:layout_marginEnd="16dp"/>
+
+
+
+        </FrameLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+
+</LinearLayout>

@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/goodMorningText"
+        android:layout_width="134.53dp"
+        android:layout_height="19.34dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="50.59dp"
+        android:layout_marginEnd="12.37dp"
+        android:layout_marginBottom="25.12dp"
+        android:fontFamily="@font/montserrat"
+        android:text="@string/good_morning"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/hearts"
+        style="@style/heart_background"
+        android:layout_width="23.76dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="175dp"
+        android:layout_marginTop="45.53dp"
+        android:layout_marginEnd="156dp"
+        android:scaleType="fitCenter"
+        app:layout_constraintLeft_toLeftOf="@id/goodMorningText"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/heartsicon" />
+
+
+    <FrameLayout
+        android:layout_width="39.59dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="342dp"
+        android:layout_marginTop="36.63dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="16.86dp"
+        app:layout_constraintBottom_toTopOf="@id/inputlayout"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/notificationbody"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/notification_group_icon" />
+
+
+    </FrameLayout>
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/inputlayout"
+        android:layout_width="359dp"
+        android:layout_height="53.45dp"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginStart="27dp"
+        android:layout_marginTop="93.05dp"
+        android:layout_marginEnd="28dp"
+        android:background="@color/white"
+        app:endIconDrawable="@drawable/serachicon"
+        android:gravity="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:endIconCheckable="true">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/montserrat"
+            android:drawableEnd="@drawable/serachicon"
+            android:hint="Search for celebrants"
+            android:textColor="@color/black"
+            android:textSize="13sp"
+            tools:ignore="TouchTargetSizeCheck" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/inputlayout">
+        <!-- This layout provides a scrolling platform for the nested scrollview-->
+
+        <LinearLayout
+           android:id="@+id/layout_in_scrollview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <androidx.viewpager2.widget.ViewPager2
+                android:id="@+id/viewPager"
+                android:layout_width="match_parent"
+                android:layout_height="320dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="31.68dp"
+                android:orientation="horizontal"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                >
+
+
+            </androidx.viewpager2.widget.ViewPager2>
+<TextView
+    android:id="@+id/upComingBirthdays"
+    android:layout_width="wrap_content"
+    android:text="Upcoming Birthdays"
+    android:textStyle="bold"
+    android:layout_marginTop="45dp"
+    android:layout_marginStart="30.68dp"
+    android:layout_height="wrap_content">
+
+</TextView>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:nestedScrollingEnabled="true"
+
+                tools:listitem="@layout/list_view_design" />
+
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+
+    <!-- Here is the floating action button it should be constrained to the top  of the bottom navigation view -->
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/floatingbotton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/fab_button"
+        app:layout_constraintBottom_toTopOf="@id/bottom_nav_view"
+        app:layout_constraintRight_toRightOf="@id/bottom_nav_view">
+
+    </com.google.android.material.floatingactionbutton.FloatingActionButton>
+
+
+    <!-- Here is the Bottom navigation view constrained to the bottom of the page-->
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_nav_view"
+        android:layout_width="414dp"
+        android:layout_height="62dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:menu="@menu/bottom_nav_menu">
+
+    </com.google.android.material.bottomnavigation.BottomNavigationView>
+
+
+    <!-- Here is the closing tag for the parent constraint-->
+</androidx.constraintlayout.widget.ConstraintLayout>
+
